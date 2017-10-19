@@ -1,7 +1,7 @@
 (() => {
     'use strict';
 
-    angular.module('chat').constant('host', 'http://localhost:3000/');
+    angular.module('chat').constant('host', 'http://localhost:5000/');
 
     angular
         .module('chat')
