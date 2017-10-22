@@ -1,7 +1,7 @@
 (() => {
     'use strict';
 
-    angular.module('chat').constant('host', 'https://brealsxx.herokuapp.com/');
+    angular.module('chat').constant('host', 'http://brealsxx.herokuapp.com/');
 
     angular
         .module('chat')
