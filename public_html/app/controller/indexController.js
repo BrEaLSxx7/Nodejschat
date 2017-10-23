@@ -87,7 +87,11 @@
                 DataBase.login($scope.data).then(function successCallback(response) {
                     if (response.data.rows.length > 0) {
                         $scope.mensaje = "logueado correctamente";
-                        $scope.date = response.data.rows;
+                        $scope.date = {
+                            response.data.rows.nombre,
+                            response.dara.rows.email,
+                            response.data.rows.apodo
+                                      };
                         sessionStorage.setItem('date', JSON.stringify($scope.date));
                         $state.go('dashboard');
                     } else {
