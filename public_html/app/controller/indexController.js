@@ -88,9 +88,9 @@
                     if (response.data.rows.length > 0) {
                         $scope.mensaje = "logueado correctamente";
                         $scope.date = {
-                            response.data.rows.nombre,
-                            response.data.rows.email,
-                            response.data.rows.apodo
+                            response.data.rows[0].nombre,
+                            response.data.rows[0].email,
+                            response.data.rows[0].apodo
                                       };
                         sessionStorage.setItem('date', JSON.stringify($scope.date));
                         $state.go('dashboard');
