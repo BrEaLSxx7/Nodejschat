@@ -89,7 +89,7 @@
                         $scope.mensaje = "logueado correctamente";
                         $scope.date = {
                             response.data.rows.nombre,
-                            response.dara.rows.email,
+                            response.data.rows.email,
                             response.data.rows.apodo
                                       };
                         sessionStorage.setItem('date', JSON.stringify($scope.date));
