@@ -4,7 +4,7 @@ var db = require('../model/');
 
 /* GET home page. */
 router.get('/:email/:pass', function (req, res, next) {
-  db.query("SELECT email, password, apodo  FROM public.user where email=$1 AND password=$2", [req.params.email, req.params.pass])
+  db.query("SELECT email, password, apodo, nombre  FROM public.user where email=$1 AND password=$2", [req.params.email, req.params.pass])
     .then(response => {
       res.json({ rows: response.rows });
     })
