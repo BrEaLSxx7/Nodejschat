@@ -87,12 +87,14 @@
                 DataBase.login($scope.data).then(function successCallback(response) {
                     if (response.data.rows.length > 0) {
                         $scope.mensaje = "logueado correctamente";
-                        $scope.date = {
-                            response.data.rows[0].nombre,
-                            response.data.rows[0].email,
-                            response.data.rows[0].apodo
-                                      };
-                        sessionStorage.setItem('date', JSON.stringify($scope.date));
+                        $scope.date = response.data.rows;
+                        $scope.date2 = {
+                            email: $scope.date[0].email,
+                            apodo: $scope.date[0].apodo,
+                            nombre: $scope.date[0].nombre
+
+                        };
+                        sessionStorage.setItem('date', JSON.stringify($scope.date2));
                         $state.go('dashboard');
                     } else {
                         $scope.mensaje = "Email y/o Contraseña incorrectos";

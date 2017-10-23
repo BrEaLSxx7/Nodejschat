@@ -14,7 +14,7 @@
 			$state.go('index');
 		} else {
 			$scope.date = JSON.parse(sessionStorage.getItem('date'));
-			$scope.mensaje = $scope.date[0].apodo;
+			$scope.mensaje = $scope.date.apodo;
 		}
 	}
 })();
