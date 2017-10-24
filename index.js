@@ -16,7 +16,7 @@ app.set('views', path.join(__dirname, 'views'));
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 var io = require('socket.io')(server);
 io.on('connection', (socket) => {
-  console.log("un nuevo usuario se ah conectado");
+  //console.log("un nuevo usuario se ah conectado");
 });
 app.use(logger('dev'));
 app.use(bodyParser.json());
