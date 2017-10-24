@@ -4,13 +4,10 @@
  * Module dependencies.
  */
 
-var app = require('../index.js');
-var debug = require('debug')('nodejs5chat:server');
-
+var app = require('../index');
+var debug = require('debug')('nodejscv:server');
 var http = require('http');
 
-
-server = http.createServer(app);
 /**
  * Get port from environment and store in Express.
  */
@@ -22,8 +19,7 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-
-
+var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
