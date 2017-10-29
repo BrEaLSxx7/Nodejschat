@@ -7,13 +7,13 @@
 	function dashboardController($scope, DataBase, $log, $mdToast, $state) {
 		$scope.currentNavItem = 'Chat';
 		$scope.logout = () => {
-			sessionStorage.clear();
+			localStorage.clear();
 			$state.go('index');
 		};
-		if (!sessionStorage.getItem("date")) {
+		if (!localStorage.getItem("date")) {
 			$state.go('index');
 		} else {
-			$scope.date = JSON.parse(sessionStorage.getItem('date'));
+			$scope.date = JSON.parse(localStorage.getItem('date'));
 			$scope.mensaje = $scope.date.apodo;
 		}
 	}
