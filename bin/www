@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../index');
+var app = require('../index.js');
 var debug = require('debug')('nodejscv:server');
 var http = require('http');
 
