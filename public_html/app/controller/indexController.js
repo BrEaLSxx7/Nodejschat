@@ -57,7 +57,7 @@
                     });
             }
         };
-        if (!sessionStorage.getItem('date')) {
+        if (!localStorage.getItem('date')) {
             var last = {
                 top: true,
                 right: true
