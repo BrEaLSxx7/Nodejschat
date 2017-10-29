@@ -94,7 +94,7 @@
                             nombre: $scope.date[0].nombre
 
                         };
-                        sessionStorage.setItem('date', JSON.stringify($scope.date2));
+                       localStorage.setItem('date', JSON.stringify($scope.date2));
                         $state.go('dashboard');
                     } else {
                         $scope.mensaje = "Email y/o Contraseña incorrectos";
